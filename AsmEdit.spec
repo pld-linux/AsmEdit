@@ -24,7 +24,7 @@ AsmEdit jest obszernym edytorem napisanym w assemblerze. Nie wymaga
 %prep
 %setup -q -n release
 %{__sed} -i 's,~/bin,%{_bindir},' Makefile
-%{__sed} -i 's,/bin/bash,%{___build_shell},' * 
+%{__sed} -i 's,/bin/bash,%{___build_shell},' a.f* 
 
 %build
 %{__make}
