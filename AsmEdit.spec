@@ -9,8 +9,9 @@ Source0:	http://dl.sourceforge.net/asmedit/%{name}-%{version}.tar.gz
 # Source0-md5:	6daef4f78eff08e4ba10abfa8a67ba86
 URL:		http://asmedit.massmind.org/
 BuildRequires:	nasm
-BuildRequires:	sed >= 4.1.1
-BuildArch:	%{ix86}
+BuildRequires:  sed >= 4.1.1
+ExclusiveArch:	%{ix86}
+ExclusiveOS:	Linux
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
