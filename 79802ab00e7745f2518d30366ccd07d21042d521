@@ -1,0 +1,21 @@
+- moved source preparation from %build to %prep
+- simpliefed sed regex
+- use macros instead fixed paths
+- BR: sed >= 4.x for changing in place files
+- use ___build_shell instead of /bin/bash
+- maybe it's for linux only:
+  $ a
+  zsh: invalid system call (core dumped)  a
+  on my FreeBSD box.
+  $ truss a
+  ioctl(134512773,0x1,0xbfbfea04)                  ERR#9 'Bad file descriptor'
+  ioctl(134512773,0x1,0xbfbfea04)                  ERR#9 'Bad file descriptor'
+  write(134512773,0x1,-1077941756)                 ERR#9 'Bad file descriptor'
+  ioctl(134512778,0x1,0xbfbfea04)                  ERR#9 'Bad file descriptor'
+  seteuid(0xbfbfea04)                              ERR#1 'Operation not permitted'
+  obs_vtimes()                                     ERR#78 'Function not implemented'
+  SIGNAL 12
+  SIGNAL 12
+  Process stopped because of:  16
+  process exit, rval = 140
+  zsh: invalid system call (core dumped)  truss a
