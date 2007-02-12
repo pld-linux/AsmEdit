@@ -1,5 +1,5 @@
 Summary:	AsmEdit - editor written in assembler
-Summary(pl):	AsmEdit - edytor napisany w asemblerze
+Summary(pl.UTF-8):   AsmEdit - edytor napisany w asemblerze
 Name:		AsmEdit
 Version:	0.9.2
 Release:	1
@@ -18,9 +18,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 AsmEdit is a full featured editor written in assembler. It does not
 require any libraries. It works in console.
 
-%description -l pl
+%description -l pl.UTF-8
 AsmEdit jest obszernym edytorem napisanym w asemblerze. Nie wymaga
-¿adnych bibliotek. Pracuje w konsoli.
+Å¼adnych bibliotek. Pracuje w konsoli.
 
 %prep
 %setup -q -n release
